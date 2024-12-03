@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Poppins:ital,wght@0,400;1,900&family=Rubik+Broken+Fax&family=VT323&display=swap');
+        body{
+            background-color:rgb(32, 74, 32);
+        
+            font-size: xx-large;
+            color: azure;
+            font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Initializing Hacking...
+    Reading your Files...
+    Password files Detected...
+    Sending all passwords and personal files to server...
+    Cleaning up... -->
+    <script>
+        var name= prompt("Specify the name of Target")
+      let phno = prompt("Enter his/her phone number:")
+
+        let write= ["Initializing Hacking",
+    "Reading your Files",
+    "Password files Detected",
+    "Sending all passwords and personal files to server",
+   "Cleaning up"]
+   
+   const pro=  async()=>{
+    return new Promise((resolve , reject)=>{
+        setInterval(()=>{
+            resolve(2)
+        },(1+4*Math.random())*1000)
+    })
+   }
+   const  print= async(message)=>{
+    await pro()
+    let div = document.createElement("div");
+            div.innerHTML = message;
+            document.body.append(div)
+   }
+
+async function main() {
+        let t= setInterval(()=>{
+            let last = document.body.getElementsByTagName("div") //VT323
+            last= last[last.length-1]
+            if(last.innerHTML.endsWith("...")){
+                    last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length-3)
+                }
+                else{
+
+                    last.innerHTML = last.innerHTML + "."
+                }
+
+            
+        },100)
+
+        for (let i = 0; i < write.length; i++) {
+                await print(write[i])
+        }
+
+        await pro() //when for loop end
+        clearInterval(t)
+        let flexContainer = document.createElement("div");
+    flexContainer.style.display = "flex";
+    flexContainer.style.alignItems = "center";
+    flexContainer.style.justifyContent = "center";
+    flexContainer.style.marginTop = "20px";
+
+    // Creating the "Hacked" text
+    let naam = document.createElement("div");
+    naam.innerHTML = `${name}`;
+    naam.style.color = "red";
+    naam.style.fontSize = "2rem";
+    naam.style.fontWeight = "bold";
+    naam.style.marginRight = "10px";
+
+    let hackedText = document.createElement("div");
+    hackedText.innerHTML = `Hacked!!`;
+    hackedText.style.color = "azure";
+    hackedText.style.fontSize = "2rem";
+    hackedText.style.fontWeight = "bold";
+    hackedText.style.marginRight = "10px";
+
+    // Creating the danger logo
+    let dangerLogo = document.createElement("img");
+    dangerLogo.src = "hacker.png"; // Danger icon URL
+    dangerLogo.alt = "Danger Logo";
+    dangerLogo.style.width = "50px";
+    dangerLogo.style.height = "50px";
+
+    // Appending the text and logo to the flex container
+    flexContainer.appendChild(naam);
+    flexContainer.appendChild(hackedText);
+    flexContainer.appendChild(dangerLogo);
+
+    // Appending the flex container to the body
+    document.body.append(flexContainer);
+}
+main()
+    
+ 
+    </script>
+</body>
+</html>
